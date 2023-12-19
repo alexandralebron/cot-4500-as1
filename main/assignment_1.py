@@ -61,9 +61,8 @@ def bisection_method(left: float, right: float, given_function: str):
         # find function(midpoint)
         mid_point = (left + right) / 2
         x = mid_point
-        evaluated_midpoint = eval(given_function)
 
-        if evaluated_midpoint == 0.0:
+        if (evaluated_midpoint := eval(given_function)) == 0.0:
             break
         
         # find function(left)
