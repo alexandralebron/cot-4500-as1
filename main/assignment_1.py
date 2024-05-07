@@ -1,4 +1,5 @@
 from decimal import Decimal
+import math
 
 #1 for converting
 float = "010000000111111010111001"
@@ -63,7 +64,7 @@ def bisection_method(left: float, right: float, given_function: str):
         x = mid_point
         evaluated_midpoint = eval(given_function)
 
-        if evaluated_midpoint == 0.0:
+        if math.isclose(evaluated_midpoint, 0.0, rel_tol=1e-09, abs_tol=0.0):
             break
         
         # find function(left)
